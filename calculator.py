@@ -1,4 +1,4 @@
-class Calculadora:
+class Calculator:
     def add(self, a, b):
         return a + b
 
@@ -21,3 +21,4 @@ class Calculadora:
         except Exception as e:
 
             raise ValueError(f"Expresión inválida: {e}")
+
