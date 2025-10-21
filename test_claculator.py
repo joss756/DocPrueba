@@ -12,6 +12,26 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(self.calc.add(-1, 1), 0)
         self.assertEqual(self.calc.add(0, 0), 0)
 
+    # Prueba unitaria: Verificar que la resta sea correcta
+    def test_subtract(self):
+        self.assertEqual(self.calc.subtract(5, 3), 2)
+        self.assertEqual(self.calc.subtract(1, 1), 0)
+        self.assertEqual(self.calc.subtract(0, 5), -5)
+
+    # Prueba unitaria: Verificar que la multiplicación sea correcta
+    def test_multiply(self):
+        self.assertEqual(self.calc.multiply(2, 3), 6)
+        self.assertEqual(self.calc.multiply(-1, 1), -1)
+        self.assertEqual(self.calc.multiply(0, 5), 0)
+
+    # Prueba unitaria: Verificar que la división sea correcta
+    def test_divide(self):
+        self.assertEqual(self.calc.divide(6, 3), 2)
+        self.assertEqual(self.calc.divide(5, 2), 2.5)
+        self.assertEqual(self.calc.divide(-4, 2), -2)
+        with self.assertRaises(ValueError):
+            self.calc.divide(5, 0)  # División por cero
+
     # Caso de prueba de integración: Operaciones encadenadas
     def test_chained_operation(self):
         # Prueba una expresión encadenada simple
