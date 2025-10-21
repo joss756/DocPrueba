@@ -5,7 +5,7 @@ class CalculatorGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculadora Básica")
-        self.root.geometry("300x400")  # Tamaño de la ventana
+        self.root.geometry("400x500")  # Tamaño de la ventana
         self.calc = Calculator()
         self.expression = ""  # Almacena la expresión actual
 
@@ -51,4 +51,5 @@ class CalculatorGUI:
 if __name__ == "__main__":
     root = tk.Tk()
     gui = CalculatorGUI(root)
+
     root.mainloop()
